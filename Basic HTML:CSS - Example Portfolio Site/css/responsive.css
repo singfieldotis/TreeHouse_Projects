@@ -1,0 +1,91 @@
+/*Media queries use the @media CSS rule to define conditions of the browser medium. In other words, it allows for CSS styling to only be included if certain conditions are met, such as a specific browser width. @media selects screen as most websites are in "print" format. Breakpoints - The specific screen widths where a responsive layout "breaks" and needs to change in order to accommodate the screen. 480px breakpoint chosen as that is a common size for smartphone screens in landscape mode. 660px os another common device size. Ensure sizes cascade in ascending order as you code*/
+
+@media screen and (min-width: 480px) {
+  
+/****************************************
+Page:    Two Column Layout
+*****************************************/
+  
+  #primary {
+    width: 50%;
+    float: left;
+  }
+  
+  #secondary {
+    width: 40%;
+    float: right; 
+  }
+  
+  /****************************************
+3*5 = 15
+100%-15=85%
+85/3= 28.333333333333333
+This is how to figure out how much margin to use for three column layout when natural margin is 2.5%  
+*****************************************/
+  
+  
+  
+/****************************************
+Page:    Portfolio
+*****************************************/
+  
+#gallery li {
+  width: 28.3333%;
+  }
+  
+  #gallery li:nth-child(4n) {
+    clear: left; 
+  }
+  
+  
+  
+  /****************************************
+Page:    About
+*****************************************/
+  
+  .profile-photo {
+    float: left;
+    margin: 0 5% 80px 0;
+  }
+}  
+
+
+
+@media screen and (min-width: 660px) {
+  
+  /****************************************
+Header
+*****************************************/
+  
+  nav {
+    background: none;
+    float: right;
+    font-size: 1em;
+    margin-right: 5%;
+    text-align: right;
+    width: 45%;
+  }
+  
+  #logo {
+    float: left;
+    margin-left: 5%;
+    text-align: left;
+    width: 45%;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    font-size: 0.825em;
+    margin-bottom: 20px;
+  }
+  
+  header {
+    border-bottom: 5px solid #599a68;
+    margin-bottom: 60px;
+    
+  }
+  
+}
